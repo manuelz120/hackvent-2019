@@ -2,7 +2,7 @@
 
 Today we give away decorations for your Christmas tree. But be careful and do not break it.
 
-![HV19.02-Triangulation.zip](./a5f47ab8-f151-4741-b061-d2ab331bf641.zip)
+[HV19.02-Triangulation.zip](./a5f47ab8-f151-4741-b061-d2ab331bf641.zip)
 
 ### Solution 
 
