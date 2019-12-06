@@ -5,7 +5,6 @@ const markup = fs.readFileSync("./input.html").toString();
 const charsToSkip = [" ", "\r", "\n", ".", ",", "-"];
 
 const cleanedUpMarkup = markup
-  .trim()
   .split("")
   .filter(c => !charsToSkip.some(v => v === c))
   .join("");
