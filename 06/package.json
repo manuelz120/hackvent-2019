@@ -1,0 +1,15 @@
+{
+  "name": "hv19.06",
+  "version": "1.0.0",
+  "description": "Solves the bacon cipher",
+  "main": "bacon.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manuel Zametter",
+  "license": "ISC",
+  "dependencies": {
+    "@yaas/bacon-cipher": "^2.2.0"
+  }
+}

@@ -16,4 +16,10 @@ Secrets: unknown
 
 ### Solution
 
-**Flag:**
+The text is a typeface-based [Bacon Cipher](https://en.wikipedia.org/wiki/Bacon%27s_cipher). The trick is to convert the individual characters to A's and B's, depending on their typeface. I wrote a small JavaScript program to process the text and decode the Bacon Cipher. The output of my program looks like this:
+
+```
+Santalikeshisbaconbutalsothisbaconthepasswordishvxbaconcipherissimplebutcoolxreplacexwithbracketsanduseuppercaseforallcharacteraaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+```
+
+**Flag:** HV19{BACONCIPHERISSIMPLEBUTCOOL}
