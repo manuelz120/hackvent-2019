@@ -76,17 +76,16 @@ function createXorMask(width, height) {
   while (!foundFlag && startIndex < maskData[0].length) {
     const flagData = cloneDeep(data);
 
-    for (let y = 0; y < 33; y++) {
-      for (let x = 0; x < 33; x++) {
-        flagData[y * 33 + x] ^= maskData[y][startIndex + x];
+    for (let y = 0; y < height; y++) {
+      for (let x = 0; x < width; x++) {
+        flagData[y * width + x] ^= maskData[y][startIndex + x];
       }
     }
-    const filename = `./flag.jpg`;
-    const [_, code] = await createQrCode(filename, flagData, 33);
+    const [_, code] = await createQrCode("./flag.jpg", flagData, width);
     foundFlag = code.length > 0;
 
     if (foundFlag) {
-      console.log(`Got flag: ${code}`);
+      console.log(`Got flag: ${code} - Start Index was ${startIndex}`);
     }
 
     startIndex++;
