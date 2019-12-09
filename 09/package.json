@@ -1,19 +1,18 @@
 {
   "name": "hv19.09",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "HV19.09",
+  "main": "crack.js",
   "scripts": {
+    "start": "node crack.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Manuel Zametter",
   "license": "ISC",
   "dependencies": {
-    "@nuintun/qrcode": "^1.0.1",
     "cellular-automata": "^2.0.1",
     "jimp": "^0.9.3",
     "lodash": "^4.17.15",
-    "node-zxing": "^0.1.4",
-    "sha256-file": "^1.0.0"
+    "node-zxing": "^0.1.4"
   }
 }
