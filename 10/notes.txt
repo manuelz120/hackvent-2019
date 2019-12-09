@@ -1,0 +1,1 @@
+gdbserver --once localhost:4444 ./guess 1234
