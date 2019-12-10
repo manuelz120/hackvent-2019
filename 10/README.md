@@ -8,4 +8,6 @@ The flag is right, of course
 
 ### Solution
 
-**Flag:** 
+`ltrace -o log.txt ./guess3`
+
+**Flag:** HV19{Sh3ll_0bfuscat10n_1s_fut1l3}
