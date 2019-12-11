@@ -7,7 +7,7 @@ Not each quote is compl
 This hidden challenge was released together with day 11, so it should be related to this challenge. Doing a port scan on the host of the REST Service (whale.hacking-lab.com), shows that one more port is open (17). When connecting to this port via `netcat`, I got back a single character.
 
 ```
-manuel@ManuelErika:~$ncat whale.hacking-lab.com 17
+manuel@ManuelErika:~$ ncat whale.hacking-lab.com 17
 r
 ```
 
