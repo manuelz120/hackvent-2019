@@ -51,20 +51,26 @@ Private Sub Text1_Change() '401F80
   loc_004020A6: ref_to_text2 = ref_to_text
   ' check if HV19 is at beginning
   loc_00402228: var_ret_7 = (Mid(ref_to_text2, 1, 1) = &H401B20) And (Mid(ref_to_text2, 2, 1) = &H401B28) And (Mid(ref_to_text2, 3, 1) = &H401B30) And (Mid(ref_to_text2, 4, 1) = &H401B38)
-  loc_00402235: var_1C0 = CBool(var_ret_7)
-  loc_00402280: If var_1C0 = 0 Then GoTo loc_004024B2
-  loc_004022A2: var_5C = Len(ref_to_text2)
-  loc_004022B9: If (var_5C = 33) = 0 Then GoTo loc_00402486
-  loc_0040232D: For var_24 = 6 To Len(ref_to_text2) - 1 Step 1
-  loc_00402339: 
-  loc_0040233B: If var_1D4 = 0 Then GoTo loc_0040240B
-  loc_00402375: var_154 = Asc(CStr(Mid(ref_to_text2, CLng(var_24), 1)))
-  loc_00402391: call Xor(var_7C, var_15C, var_24, var_4C, Me, Me, %S_eax_S = CLng(%StkVar1), %x1 = Mid(%StkVar2, %StkVar3, %StkVar4), 00000002h)
-  loc_00402398: var_ret_A = CLng(Xor(var_7C, var_15C, var_24, var_4C, Me, Me, var_ret_A = CLng(%StkVar1), %x1 = Mid(%StkVar2, %StkVar3, %StkVar4), 00000002h))
+  loc_00402235: starts_with_hv19 = CBool(var_ret_7)
+  loc_00402280: If starts_with_hv19 = 0 Then GoTo loc_004024B2
+  loc_004022A2: flag_length = Len(ref_to_text2)
+  loc_004022B9: If (flag_length = 33) = 0 Then GoTo loc_00402486
+
+
+
+  loc_0040232D: For loop_counter = 6 To Len(ref_to_text2) - 1 Step 1
+  next_iteration: 
+  loc_0040233B: If var_1D4 = 0 Then GoTo after_loop
+  loc_00402375: var_154 = Asc(CStr(Mid(ref_to_text2, CLng(loop_counter), 1)))
+  loc_00402391: call Xor(var_7C, var_15C, loop_counter, var_4C, Me, Me, %S_eax_S = CLng(%StkVar1), %x1 = Mid(%StkVar2, %StkVar3, %StkVar4), 00000002h)
+  loc_00402398: var_ret_A = CLng(Xor(var_7C, var_15C, loop_counter, var_4C, Me, Me, var_ret_A = CLng(%StkVar1), %x1 = Mid(%StkVar2, %StkVar3, %StkVar4), 00000002h))
   loc_004023C5: var_44 = var_44 + Chr(var_ret_A)
-  loc_00402400: Next var_24
-  loc_00402406: GoTo loc_00402339
-  loc_0040240B: 'Referenced from: 0040233B
+
+  loc_00402400: Next loop_counter
+  loc_00402406: GoTo next_iteration
+
+
+  after_loop: 'Referenced from: 0040233B
   loc_00402433: If (var_44 = "6klzic<=bPBtdvff'yFI" = 0 Then GoTo loc_00402477
   loc_00402456: var_eax = Unknown_VTable_Call[ecx+00000054h]
   loc_00402477: 'Referenced from: 00402433
