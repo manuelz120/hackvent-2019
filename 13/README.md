@@ -11,4 +11,9 @@ Can you break it and retrieve the critical information?
 
 ### Solution
 
-**Flag:**
+Trick the trie by appending a null-byte to the key: `auth_token_4835989\0`
+Details follow.
+
+![](./flag.jpg)
+
+**Flag:** HV19{get_th3_chocolateZ}

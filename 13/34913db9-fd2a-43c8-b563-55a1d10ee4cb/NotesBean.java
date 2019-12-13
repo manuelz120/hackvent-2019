@@ -45,7 +45,7 @@ public class NotesBean implements Serializable {
 		
     private static PatriciaTrie<Integer> init(){
         PatriciaTrie<Integer> trie = new PatriciaTrie<Integer>();
-        trie.put(securitytoken,0);
+        trie.put(securitytoken, 0);
 
         return trie;
     }
@@ -55,7 +55,7 @@ public class NotesBean implements Serializable {
     }
 
     private static InputStream getStreamFromResourcesFolder(String filePath) {
-    	  return Thread.currentThread().getContextClassLoader().getResourceAsStream(filePath);
-    	 }
+    	return Thread.currentThread().getContextClassLoader().getResourceAsStream(filePath);
+    }
 
 }
