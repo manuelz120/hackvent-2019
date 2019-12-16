@@ -44,7 +44,9 @@ __DATA__
 
 ### Solution
 
-Patched the script to simply print the flag. Details follow.
+For this challenge, we get a perl implementation of the game [Achtung die Kurve](https://achtungkurve.com/). Instead of opponents, we need to collect parts of the flag (similar to snake). Of course, solving the challenge by simply playing the game is really hard (if not impossible) and also boring. Therefore, I decided to patch the script. In the first step, I started to format the script and rename variables, to get some general overview what is going on. 
+
+Using this approach, it was quite easy to figure out which conditions force the game to prematurely exit (because they lead to a call of the cancel function). This way, I was able to prevent the game from stopping once I hit a wall or some part of my snake. Moreover, I made sure the game still renders already collected flag fragments (by commenting out the call to delete) and adapted the placement of the characters. Finally, I patched updated the condition to always render the next part of the flag, no matter if the previous one was already collected. After all these changes, the game is essentially self-solving and prints the flag without further human interaction: 
 
 ![](./solution.jpg)
 
