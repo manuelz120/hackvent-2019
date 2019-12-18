@@ -12,15 +12,14 @@ namespace HV1918
         {
             var encrypted = StringToByteArray("096CD446EBC8E04D2FDE299BE44F322863F7A37C18763554EEE4C99C3FAD15");
             var salsa = new Salsa20();
-            var iv  = "11458fe7a8d032b1";
+            var iv = "11458fe7a8d032b1";
             var decryptor = salsa.CreateDecryptor(StringToByteArray("0320634661b63cafaa76c27eea00b59bfb2f7097214fd04cb257ac2904efee46"),
                 StringToByteArray(iv));
             var output = new byte[encrypted.Length];
             decryptor.TransformBlock(encrypted, 0, encrypted.Length, output, 0);
 
-            var encryptor = salsa.CreateEncryptor(StringToByteArray("0320634661b63cafaa76c27eea00b59bfb2f7097214fd04cb257ac2904efee46"), StringToByteArray("B132D0A8E78F4511"));
             Console.WriteLine(Encoding.ASCII.GetString(output));
-            
+
             Console.ReadLine();
         }
 
