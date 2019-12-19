@@ -6,6 +6,13 @@
 
 ### Solution
 
+```
+ 🔒 ➡️ 🎅🏻⁉️ ➡️ 🎄🚩
+[+] Receiving all data: Done (28B)
+[*] Process './ch19' stopped with exit code 0 (pid 13015)
+Done: 🔑
 
+HV19{*<|:-)____\o/____;-D}
+```
 
 **Flag:** HV19{*<|:-)____\o/____;-D}
