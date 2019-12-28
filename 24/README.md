@@ -14,5 +14,6 @@ Happy christmas!
 
 ### Solution
 
+Key comes from ROM, xored flag is stored in memory. Download [rom.bin](./rom.bin) from https://github.com/seemoo-lab/bcm_misc/blob/master/bcm43430a1/rom.bin
 
-**Flag:** 
+**Flag:** HV19{Y0uw3n7FullM4Cm4n}
