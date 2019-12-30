@@ -2,14 +2,14 @@
 
 Santa is prototyping a new gadget for his sledge. Unfortunately it still has some glitches, but look for yourself.
 
-For easy do wnload, get it here: [HV19-SantaRider.zip](./3dbe0c12-d794-4f79-ae67-09ac27bd099d.zip)
+For easy download, get it here: [HV19-SantaRider.zip](./3dbe0c12-d794-4f79-ae67-09ac27bd099d.zip)
 
 ### Solution
 When looking at the middle of the video, we can see that the LEDs start to wildly blink instead of continuing the pattern from the beginning/end. Also, there are exactly 8 LEDs, which could represent eight bits. I stopped the video at the beginning (see photo) and realized that those are indeed the bits of an H.
 
 ![](./image-274.jpeg)
 
-Using the following `ffmpeg' command, I extracted all video frames and manually converted the blinking LEDs to bits:
+Using the following `ffmpeg` command, I extracted all video frames and manually converted the blinking LEDs to bits:
 
 `ffmpeg -i .\3DULK2N7DcpXFg8qGo9Z9qEQqvaEDpUCBB1v.mp4 image-%d.jpeg`
 

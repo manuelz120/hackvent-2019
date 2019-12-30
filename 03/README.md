@@ -11,7 +11,7 @@ hodor.hod(hhodor. Hodor. Hodor!? );
 
 ### Solution 
 
-This challenge was labelled as fun-programming, so my first guess was that the obscure string could be a program in some sort of esotheric programming language. A quick google search reveals that there is a [Hodor](http://www.hodor-lang.org/) programming language. The website links to a [GitHub-Repo](https://github.com/hummingbirdtech/hodor), which shows that Hodor is just some JavaScript translation. Fortunately, there are already some online [Tools](https://tio.run/#hodor), which allow you to run your Hodor code online. I pasted the code and got the following output:
+This challenge was labelled as fun-programming, so my first guess was that the obscure string could be a program in some sort of esoteric programming language. A quick google search reveals that there is a [Hodor](http://www.hodor-lang.org/) programming language. The website links to a [GitHub-Repo](https://github.com/hummingbirdtech/hodor), which shows that Hodor is just some JavaScript translation. Fortunately, there are already some online [Tools](https://tio.run/#hodor), which allow you to run your Hodor code online. I pasted the code and got the following output:
 
 ```
 Awesome, you decoded Hodors language! 
@@ -26,7 +26,7 @@ So we only need to base64-decode the output to get the flag.
 **Flag:** HV19{h01d-th3-d00r-4204-ld4Y}
 
 ### Bonus
-IF we look at the code in the Hodor-Repository, we can see that during execution the whole program is translated back to JavaScript and executed using `eval`. This way, we can easily recover the original JS code:
+If we look at the code in the Hodor-Repository, we can see that during execution the whole program is translated back to JavaScript and executed using `eval`. This way, we can easily recover the original JS code:
 
 ```javascript
 var html = `Awesome, you decoded Hodors language!
