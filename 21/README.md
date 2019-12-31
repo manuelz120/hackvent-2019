@@ -26,7 +26,7 @@ Hy97Xwv97vpwGn21finVvZj5pK/BvBjscf6vffm1po0=
 ```
 
 ### Solution
-For this challenge, we need to find santas password and recover the flag. As the challenge description already mentions, the falg is encrypted with AES256 and a special key derivation method. Without knowing the password, this is impossible to break within the given timeframe. However, we have some more information.
+For this challenge, we need to find santas password and recover the flag. As the challenge description already mentions, the flag is encrypted with AES256 and a special key derivation method. Without knowing the password, this is impossible to break within the given timeframe. However, we have some more information.
 
 1. Santas password was leaked 10 years ago and is 11 characters long: As rockyou.txt came out approximately 10 years ago, my first guess was to check all 11 character entries of rockyou. 
 2. Santa uses the SHA256 of the SAME password, as his private key (`d`) of his ECC key
@@ -83,6 +83,6 @@ print(flag)
 
 Santas password is: `santacomesatxmas`
 
-In theore, we would be also to find the password by directly trying the AES-decryption with all 11-character long entries of rockyou.txt, but due to the huge number of rounds in the key derivation step, this would take significantly longer.
+In theory, we would be also to find the password by directly trying the AES-decryption with all 11-character long entries of rockyou.txt, but due to the huge number of rounds in the key derivation step, this would take significantly longer.
 
 **Flag:** HV19{sry_n0_crypt0mat_th1s_year}

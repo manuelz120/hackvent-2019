@@ -9,11 +9,11 @@ But when you restore them it will print the flag!
 
 ### Solution
 
-For this challenge, we get a PE32 executable. The exe is a simple calculator program, which allows us to do the 4 basic arithmentic operations (add, subtract, multiply, divide). However, none of the operations works as expected. Moreover, we see that the calculator outputs some weird characters after we do a simple calculation: 
+For this challenge, we get a PE32 executable. The exe is a simple calculator program, which allows us to do the 4 basic arithmetic operations (add, subtract, multiply, divide). However, none of the operations works as expected. Moreover, we see that the calculator outputs some weird characters after we do a simple calculation: 
 
 ![](./initial.jpg)
 
-As the challenge description already mentions, the operations have been removed. Probably, if we succesfully readd them, this line will contain the flag. I opened the application in IDA and was quickly able to find the stub-functions for the required operations:
+As the challenge description already mentions, the operations have been removed. Probably, if we successfully readd them, this line will contain the flag. I opened the application in IDA and was quickly able to find the stub-functions for the required operations:
 
 - add: `0x4015B6`
 - subtract: `0x4015C4`

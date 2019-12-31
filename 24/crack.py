@@ -10,7 +10,6 @@ with open('./brcmfmac43430-sdio.bin', 'rb') as ramfile:
     ramfile.seek(0x58e94)
     xored_flag = ramfile.read(23)
 
-
 flag = ""
 for (k, e) in zip(key, xored_flag):
     flag += chr(k ^ e)
